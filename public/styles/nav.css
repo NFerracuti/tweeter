@@ -13,12 +13,6 @@ nav {
   left: 0px;
 }
 
-nav container {
-  display: flex;
-  align-items: baseline;
-  margin-top: 10px;
-}
-
 nav .logo {
   font-family: Bungee; /* Apply Bungee font to the navigation bar */
   font-size: 36px;
