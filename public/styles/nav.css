@@ -13,6 +13,26 @@ nav {
   left: 0px;
 }
 
-nav span {
-  font-family: Bungee;
+nav container {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+}
+
+nav .logo {
+  font-family: Bungee; /* Apply Bungee font to the navigation bar */
+  font-size: 36px;
+}
+
+nav p span {
+  font-weight: bold; /* Apply bold font style to the span within the paragraph */
+}
+
+nav p {
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-solid.fa-angles-down {
+  color: red; /* Change the color of the nav bar icon to red */
 }
