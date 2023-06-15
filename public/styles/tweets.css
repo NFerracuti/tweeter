@@ -1,4 +1,4 @@
-.each-tweet {
+article {
   display: flex;
   border: 4px solid rgb(104, 104, 104);
   margin: 5%;
@@ -6,25 +6,37 @@
   padding: 2%;
 }
 
-.each-tweet header {
+article:hover {
+  box-shadow: 5px 5px 2px 1px rgba(46, 46, 125, 0.2);
+}
+
+article header {
   display: flex;
   font-weight: 1000;
   font-size: 80%;
   justify-content: space-between;
 }
 
-.each-tweet header span img {
+article header span img {
   size: 2%;
 }
 
-.each-tweet footer {
+article footer {
   display: flex;
   justify-content: space-between;
   border-top: 4px solid rgb(104, 104, 104);
-  font-size: 50%;
+  font-size: 60%;
 }
 
-.each-tweet .tweet-text {
+article .tweet-text {
   display: flex;
   margin-top: 6%;
+}
+
+.submission-icons {
+  color: rgb(93, 93, 170)
+}
+
+.submission-icons i:hover {
+  color: rgb(208, 186, 74)
 }
