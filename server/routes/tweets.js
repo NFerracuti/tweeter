@@ -44,3 +44,9 @@ module.exports = function(DataHelpers) {
   return tweetsRoutes;
 
 }
+
+tweetsRoutes.post("/tweets", function (req, res) {
+    
+    res.status(201);
+
+}); 

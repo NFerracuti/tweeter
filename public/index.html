@@ -17,11 +17,18 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <style>
+      h1 {text-align: center;}
+      h2 {text-align: center;}
+      p {text-align: center;}
+
+    </style>
 
   </head>
 
@@ -32,13 +39,13 @@
       <span class = "logo">
         tweeter
       </span>
-      <p>
-        <container1>
+        <div class = "write-new">
         <span>Write</span> a new tweet
-        </container1>
         <i class="fa-solid fa-angles-down"></i>
-      </p>
+        </div>
     </nav>
+
+    <!-- Top header logo -->
     <header>
       <div>
         <img src="/images/profile-hex.png"> 
@@ -47,7 +54,23 @@
         <h2><span class="first-name">Nick</span> Ferracuti</h2>
       </div>
     </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <h1>This is a Header 1</h1>
+      <h2>This is a header 2</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eligendi magni commodi dolorem nemo quam assumenda facilis sint nobis quo, ipsa quae itaque nihil optio accusamus id impedit! Sapiente, iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius sapiente animi magni omnis beatae porro similique iusto et voluptas aliquid temporibus alias esse, officiis itaque eveniet repudiandae harum quasi!</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets/" method="POST">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
