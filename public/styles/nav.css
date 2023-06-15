@@ -20,7 +20,6 @@ nav .logo {
 
 .write-new span {
   font-weight: bold; /* Apply bold font style to the span within the paragraph */
-  margin-right: 6px;
 }
 
 /* 
@@ -34,7 +33,6 @@ nav p {
 }
 
 .write-new {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
 }

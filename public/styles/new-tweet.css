@@ -3,12 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 10px; */
-
+  background-color: rgb(241, 235, 221);
+  box-shadow: 5px 5px 10px 2px rgba(122, 122, 122, 0.8);
+  font-weight: 1000;
+  height: 5em;
 }
 
 .new-tweet label {
-  border-bottom: 2px solid black;
+  display: flex;
 }
 
 .new-tweet label {
@@ -17,8 +19,22 @@
 
 .new-tweet textarea {
   display: flex;
+  background-color: transparent;
+  border: transparent;
+  width: 40em;
+  height: 35px;
 } 
 
 .new-tweet button {
   display: flex;
+  color: rgb(255, 255, 255);
+  background-color: #4056A1;
+  margin-top: 3px;
+  font-family: Bungee;
+}
+
+.new-tweet form div {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid black;
 }
