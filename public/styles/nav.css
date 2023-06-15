@@ -22,12 +22,6 @@ nav .logo {
   font-weight: bold; /* Apply bold font style to the span within the paragraph */
 }
 
-/* 
-nav p {
-  display: flex;
-  flex-direction: column;
-} */
-
 .fa-solid.fa-angles-down {
   color: red; /* Change the color of the nav bar icon to red */
 }

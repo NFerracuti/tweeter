@@ -3,38 +3,44 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(241, 235, 221);
-  box-shadow: 5px 5px 10px 2px rgba(122, 122, 122, 0.8);
   font-weight: 1000;
-  height: 5em;
+}
+
+.new-tweet form {
+  width: 95%;
+  height: 90%;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 
 .new-tweet label {
-  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20%;
 }
 
-.new-tweet label {
-  display: flex;
-}
-
-.new-tweet textarea {
+#tweet-text {
   display: flex;
   background-color: transparent;
   border: transparent;
-  width: 40em;
-  height: 35px;
-} 
+  width: 100%
+}
 
 .new-tweet button {
   display: flex;
   color: rgb(255, 255, 255);
   background-color: #4056A1;
-  margin-top: 3px;
+  margin-top: 2%;
   font-family: Bungee;
+  font-size: 70%
+}
+
+.new-tweet output {
+  margin-top: 2%;
 }
 
 .new-tweet form div {
   display: flex;
   justify-content: space-between;
-  border-top: 2px solid black;
+  border-top: 4px solid rgb(104, 104, 104);
 }
