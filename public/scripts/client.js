@@ -11,7 +11,7 @@ $(document).ready(function () {
       <article>
         <header>
           <div>
-            <<i class="fa-solid fa-user-graduate fa-2xl"></i>>${obj.user.name}
+            <i>${obj.user.avatars}</i>${obj.user.name}
           </div>
           <div>
             ${obj.user.handle}
@@ -22,7 +22,7 @@ $(document).ready(function () {
         </p>
         <footer>
           <p class="submission-date">
-            ${obj.created_at}
+            ${timeago.format(obj.created_at)}
           </p>
           <p class="submission-icons">
             <i class="fa-solid fa-flag"></i>
@@ -42,34 +42,6 @@ $(document).ready(function () {
     }
   }
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
-  renderTweets(data)
-
   $("#new-tweet-form").submit((event) => {
     event.preventDefault();
     const newTweetBody = {text: event.target.text.value};
@@ -77,4 +49,12 @@ $(document).ready(function () {
       console.log("post request made");
     });
   })
+
+  const loadTweets = function() {
+    $.get("/tweets", (response) => {
+      renderTweets(response);
+      console.log("tweets loaded successfully", response);
+    })
+  }
+  loadTweets();
 });
