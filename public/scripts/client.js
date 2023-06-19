@@ -6,7 +6,14 @@
 
 $(document).ready(function () {
 
-  const createTweetElement = function (obj) {
+  //Escape function to re-encode text into a safe "encoded" text//
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+ const createTweetElement = function (obj) {
     return `
       <article>
         <header>
@@ -18,7 +25,7 @@ $(document).ready(function () {
           </div>
         </header>
         <p class="tweet-text">
-          ${obj.content.text}
+          ${escape(obj.content.text)}
         </p>
         <footer>
           <p class="submission-date">
@@ -38,21 +45,23 @@ $(document).ready(function () {
 
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
-      $('#tweets').append(createTweetElement(tweet))
+      $('#tweets').prepend(createTweetElement(tweet))
     }
   }
 
   $("#new-tweet-form").submit((event) => {
     event.preventDefault();
+
     const newTweetBody = {text: event.target.text.value};
     const tweetText = newTweetBody.text;
     if (tweetText.length > 140) {
-      return alert("tweet too long");
+      return alert("tweet too long, reduce to under 140 chars");
     } else if (tweetText.length <= 0) {
-      return alert("tweet too short");
+      return alert("tweet must have content");
     } else {
       $.post( "/tweets", newTweetBody, function() {
-        console.log("post request made");
+        console.log("tweet submitted successfully");
+        loadTweets();
       });
     }
   })
