@@ -7,35 +7,33 @@
 $(document).ready(function () {
 
   const createTweetElement = function (obj) {
-
     return `
-  <article>
-          <header>
-            <div>
-              <<i class="fa-solid fa-user-graduate fa-2xl"></i>>${obj.user.name}
-            </div>
-  
-            <div>
-              ${obj.user.handle}
-            </div>
-          </header>
-          <p class="tweet-text">
-            ${obj.content.text}
+      <article>
+        <header>
+          <div>
+            <<i class="fa-solid fa-user-graduate fa-2xl"></i>>${obj.user.name}
+          </div>
+          <div>
+            ${obj.user.handle}
+          </div>
+        </header>
+        <p class="tweet-text">
+          ${obj.content.text}
+        </p>
+        <footer>
+          <p class="submission-date">
+            ${obj.created_at}
           </p>
-          <footer>
-            <p class="submission-date">
-              ${obj.created_at}
-            </p>
-            <p class="submission-icons">
-              <i class="fa-solid fa-flag"></i>
-              &nbsp &nbsp
-              <i class="fa-solid fa-repeat"></i>
-              &nbsp &nbsp
-              <i class="fa-solid fa-heart"></i>
-            </p>
-          </footer>
-        </article>
-  `;
+          <p class="submission-icons">
+            <i class="fa-solid fa-flag"></i>
+            &nbsp &nbsp
+            <i class="fa-solid fa-repeat"></i>
+            &nbsp &nbsp
+            <i class="fa-solid fa-heart"></i>
+          </p>
+        </footer>
+      </article>
+    `;
   };
 
   const renderTweets = (tweets) => {
@@ -71,4 +69,12 @@ $(document).ready(function () {
   ]
 
   renderTweets(data)
-})
+
+  $("#new-tweet-form").submit((event) => {
+    event.preventDefault();
+    const newTweetBody = {text: event.target.text.value};
+    $.post( "/tweets", newTweetBody, function() {
+      console.log("post request made");
+    });
+  })
+});
