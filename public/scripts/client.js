@@ -45,9 +45,16 @@ $(document).ready(function () {
   $("#new-tweet-form").submit((event) => {
     event.preventDefault();
     const newTweetBody = {text: event.target.text.value};
-    $.post( "/tweets", newTweetBody, function() {
-      console.log("post request made");
-    });
+    const tweetText = newTweetBody.text;
+    if (tweetText.length > 140) {
+      return alert("tweet too long");
+    } else if (tweetText.length <= 0) {
+      return alert("tweet too short");
+    } else {
+      $.post( "/tweets", newTweetBody, function() {
+        console.log("post request made");
+      });
+    }
   })
 
   const loadTweets = function() {
