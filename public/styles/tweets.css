@@ -10,15 +10,22 @@ article:hover {
   box-shadow: 5px 5px 2px 1px rgba(46, 46, 125, 0.2);
 }
 
+.icon-name {
+  display: flex;
+  align-items: center;
+}
+
+.icon-name img {
+  margin-right: 15px;
+  width: 44px;
+}
+
 article header {
   display: flex;
+  align-items: center;
   font-weight: 1000;
   font-size: 80%;
   justify-content: space-between;
-}
-
-article header span img {
-  size: 2%;
 }
 
 article footer {
