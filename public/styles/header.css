@@ -1,5 +1,5 @@
 .main-header {
-  height: 650px;
+  height: 400px;
   width: 100%;
   background-color: rgb(242, 179, 44);
   background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
@@ -8,7 +8,6 @@
   align-items: center;
   flex-direction: column;
 }
-
 
 .first-name {
   font-weight: bold;
