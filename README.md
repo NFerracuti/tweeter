@@ -5,7 +5,7 @@ This project is Built on the [tweeter template](https://github.com/lighthouse-la
 
 ## Final Product
 
-![tweeter-tweet.gif](https://imgur.com/GJI9fS3)  
+![tweeter-tweet.gif](tweeter-main.gif)  
 View the functionalities (with animated GIF) in [Features](#features) section.
 
 &nbsp;
@@ -36,21 +36,21 @@ View the functionalities (with animated GIF) in [Features](#features) section.
 
 ### 1. Submit new tweet with form
 
-![tweeter-tweet.gif](./docs/tweeter-tweet.gif)  
+![tweeter-main.gif](./docs/tweeter-main.gif)  
 When a user submits a valid tweet, the new tweet is displayed.
 
 &nbsp;
 
 ### 2. Char Counter and Display Error Message
 
-![tweeter-charcounter-errors.gif](./docs/tweeter-charcounter-errors.gif)  
+![error-message.gif](./docs/error-message.gif)  
 When a user submits an invalid tweet (empty or contains more than 140 characters), an error message is displayed.
 
 &nbsp;
 
 ### 3. Responsive Design
 
-![tweeter-adaptive-screen-size.gif](./docs/tweeter-adaptive-screen-size.gif)  
+![responsive-design.gif](./docs/responsive-design.gif)  
 Two layouts on different screen sizes (Breakpoint: 1024px).
 
 &nbsp;
