@@ -5,7 +5,7 @@ This project is Built on the [tweeter template](https://github.com/lighthouse-la
 
 ## Final Product
 
-![tweeter-tweet.gif](./docs/tweeter-tweet.gif)  
+![tweeter-tweet.gif](https://imgur.com/GJI9fS3)  
 View the functionalities (with animated GIF) in [Features](#features) section.
 
 &nbsp;
