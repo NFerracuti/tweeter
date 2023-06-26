@@ -13,6 +13,13 @@ $(document).ready(function() {
       // Calculate remaining characters
       let remainingChars = 140 - textLength;
 
+      //change colour to red when chars run out (class added in new-tweet.css)
+      if (remainingChars <= 0) {
+        $('.counter').addClass("red-text");
+      } else {
+        $('.counter').removeClass("red-text");
+      }
+
       // Update the character counter
       $('.counter').text(remainingChars);
     });
