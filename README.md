@@ -36,21 +36,21 @@ View the functionalities (with animated GIF) in [Features](#features) section.
 
 ### 1. Submit new tweet with form
 
-![tweeter-main.gif](./docs/tweeter-main.gif)  
+![tweeter-main.gif](./documents/tweeter-main.gif)  
 When a user submits a valid tweet, the new tweet is displayed.
 
 &nbsp;
 
 ### 2. Char Counter and Display Error Message
 
-![error-message.gif](./docs/error-message.gif)  
+![error-message.gif](./documents/error-message.gif)  
 When a user submits an invalid tweet (empty or contains more than 140 characters), an error message is displayed.
 
 &nbsp;
 
 ### 3. Responsive Design
 
-![responsive-design.gif](./docs/responsive-design.gif)  
+![responsive-design.gif](./documents/responsive-design.gif)  
 Two layouts on different screen sizes (Breakpoint: 1024px).
 
 &nbsp;
