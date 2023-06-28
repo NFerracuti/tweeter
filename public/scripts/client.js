@@ -45,6 +45,7 @@ $(document).ready(function () {
 
   //Renders the tweet data by preending tweet html
   const renderTweets = (tweets) => {
+    $('#tweets').empty();
     for (const tweet of tweets) {
       $('#tweets').prepend(createTweetElement(tweet))
     }
